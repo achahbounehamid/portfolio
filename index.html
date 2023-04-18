@@ -18,17 +18,30 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <main>
+    <main id="main-menu">
+      <!-- <div id="burger">
+        <img src="./img/menu-burger.png" alt="burguer">
+      </div> -->
       <section class="first">
         <nav>
           <h2>Portfolio <span>.</span></h2>
           <ul>
+            <li><a href="#">accueil</a></li>
             <li><a href="#">a propos</a></li>
             <li><a href="#">compétence</a></li>
             <li><a href="#">portfolio</a></li>
+            <li><a href="#" class="btn">Contactez Moi</a></li>
           </ul>
-          <a href="#" class="btn">Contactez Moi</a>
+          <button id="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+         
         </nav>
+        <!-- <div id="croix">
+          <img src="./img/croix.png" alt="">
+        </div> -->
         <div class="content">
           <div class="container-texts">
             <h4>Bonjour, je m'appelle</h4>
@@ -37,90 +50,78 @@
             
           </div>
 
-              <div class="photo-perso">
-                <!-- <img src="./img/photo-hamid-1.jpg" alt="photo"> -->
-              </div>
 
           </div>
           <div class="social">
-            <a href="#"><img src="./img/facebook_logo.png" alt="fb" /></a>
-            <a href="#"><img src="./img/sociallinkedin.png" alt="linkend"/></a>
-            <a href="#"><img src="./img/github_icon_146060.png" alt="github"></a>
-            <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><img src="./img/contact_chat_com.png" alt="gmail" /></a>
+            <a href="#"><img src="./img/icons8-facebook-entouré-50.png" alt="fb" /></a>
+            <a href="#"><img src="./img/icons8-linkedin-entouré-50.png" alt="linkend"/></a>
+            <a href="#"><img src="./img/icons8-github-48.png" alt="github"></a>
+            <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><img src="./img/icons8-gmail-50.png" alt="gmail" /></a>
             
           </div>
         
         </div>
       </section>
-      <section id="a-propos">
-        <!-- <div class="images">
-          <img src="./img/Programmer-cuate.png" alt="programeur">
-        </div> -->
-        <div class="a-propos-texts">
-          <h5>A  propos de <span>Moi</span></h5>
-          <p>Après plusieurs années d'études et une session de programation informatique a Québec au Canada,<br>
-             j'ai décidé de me diriger vers  un domaine pour lequel je me suis découvert une passion,<br>
-             le déveleppement web et web mobile.</p>
-             <a href="#" class="btn">Télechargher CV</a>
-          
-        </div>
-
-
-      </section>
+       <section id="a-propos">
+        <h5>A  propos de <span>Moi</span></h5>
+        <div class="a-propos-de-moi">
+            <div class="a-propos-texts"> 
+                <p>Après plusieurs années d'études et une session de programation informatique à Québec au Canada,<br>
+                  j'ai décidé de me diriger vers  un domaine pour lequel je me suis découvert une passion,<br>
+                  le déveleppement web et web mobile.
+                </p>
+                <a href="#" class="cv">Télechargher CV</a>    
+            </div>
+            <div class="container-images">
+              <img src="./img/photo-hamid.png" alt="photo">
+              
+            </div>
+      </div>
+      </section> 
       <section  id="Compétence">
         <h5>Compétenc<span>e</span></h5>
         <div class="front-end">
 
-              
-                <img src="./img/html_original_logo_icon_146477.png" alt="html">
-              
-            
-                <img src="./img/Css.png" alt="css">
-              
-              
-                <img src="./img/javascript_icon_130900.png" alt="js">
-              
-            </div>
+            <figure  class="htm">
+                 <img src="./img/html_original_logo_icon_146477.png" alt="html">
+            </figure>
+            <figure class="css">
+                 <img src="./img/Css.png" alt="css">
+            </figure>
+            <figure class="js">
+                 <img src="./img/javascript_icon_130900.png" alt="js">
+            </figure> 
+          </div>
 
         <div class="back-end">
-          
-          <img src="./img/php_icon_130857.png" alt="php">
-          <img src="./img/icon_sql_256_30046.png" alt="sql">
-          <img src="./img/python_18894.png" alt="python_18894">
+          <figure class="php">
+            <img src="./img/php_icon_130857.png" alt="php">
+          </figure>
+          <figure class="sql">
+           <img src="./img/icon_sql_256_30046.png" alt="sql">
+          </figure>
+          <figure class="python">
+           <img src="./img/python_18894.png" alt="python_18894">
+          </figure>
         </div>
        
 
 
       </section>
-      <section class="portfolio">
+      <section id="portfolio">
         <h5>Portfoli<span>o</span></h5>
-          <div class="card">
-            <figure>
-              <img src="./img/Gites-Marhaba.png" alt="" class="gites"><br>
-              
-                <span class="card_title">Gites Marhba</span>
-                <p>Mon premier site web one page</p>
-              
-            </figure> 
-          </div>
-          <!-- <div class="cards_inner">
-              <h3 class="card_title">Gites Marhba</h3>
-              <p class="category">Mon premier site web one page</p>
-          </div> -->
-          <div class="card_overlay">
-              <a href="#">+</a>
-          </div>
+          <div class="cards">
+              <figure class="gites">
+                  <img src="./img/Gites-Marhaba.png" alt="" ><br>       
+              </figure>
 
-        <div class="card">
-            <img src="./img/jado.png" alt="" class="jado">
-        </div>
-        <div class="cards_inner">
-            <h3 class="card_title">Jado</h3>
-            <p class="category">deuxime site web one page</p>
-        </div>
-        <div class="card_overlay">
-            <a href="#">+</a>
-        </div>
+                <figure class="jado">
+                  <img src="./img/jado.png" alt="" >
+                </figure>
+                <figure class="défi">
+                  <img src="./img/desparition-défi-js.png" alt="">
+                </figure>
+          </div>
 
       </section >
       <section id="contactez-moi">
@@ -135,7 +136,7 @@
                     <input type="text" name="lasttname" placeholder="Prénom" id="lastname">
                 </label><br>
                 <label for="E-mail">
-                  <input type="email" name="E-mail" placeholder="Votre E-mail" id="E-mail">
+                  <input type="email" name="E-mail" placeholder="E-mail" id="E-mail">
                 </label><br>
                 
                   <label for="Message">
@@ -154,11 +155,17 @@
                 <img src="./img/Phone_30029.png" alt="phone">
                 <p>0651320033</p>
                 <a href="https://www.google.com/maps/place/45+Bd+Victor+Hugo,+01000+Bourg-en-Bresse/@46.2020812,5.2284824,17z/data=!3m1!4b1!4m6!3m5!1s0x47f353ca610f1539:0x40e2abdc1deb6385!8m2!3d46.2020812!4d5.2310573!16s%2Fg%2F11c23d4cz6?authuser=0" target="_blank" ><img src="./img/gps_location_navigation_pin_icon_127148.png" alt="GPS"></a>
-                <p>45 Boulvard VICTOR HUGO <br>01000 Bourg-en-bresse</p>
+                <p>45 Boulevard VICTOR HUGO <br>01000 Bourg-en-Bresse</p>
               </div>
              
         </div>
-      </section>
+      </section> 
+      <!-- <footer class="footer">
+       
+          <p>Copyright © Portfolio Hamid <span>ACHAHBOUNE</span></p>
+       
+
+      </footer> -->
     
 
 

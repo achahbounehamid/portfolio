@@ -16,10 +16,10 @@ html{
     font-size: 16px;
     color: var(--lighColor);
 }
-/*********************hero******************/
+/*********************Accuiel******************/
 .first{
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background-color: var(--bgColor-1);
     display: flex;
     flex-direction: column;
@@ -32,13 +32,14 @@ h2{
   letter-spacing: 0.12rem;
   cursor: pointer;  
 }
+
 nav{
     padding-top: 2.2rem;
     padding-left: var(--padding);
     padding-right: var(--padding);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;  
 }
 nav ul li {
     list-style: none;
@@ -46,6 +47,7 @@ nav ul li {
     margin: 0.8rem 1.5rem;
 }
 nav ul li a{
+    font-size: 1.5rem;
     text-decoration: none;
     color: var(--lighColor);
     text-transform: capitalize;
@@ -68,32 +70,54 @@ nav ul li a:hover{
     background-color: transparent;
     border: 2px solid --primaryColor;
 }
+#burger, #croix {
+    display: none;
+  }
+/***********************Accueil************************/
 .content{
     flex-grow: 1;
     padding: 0 var(--padding);
     display: flex;
     align-items: center;
+    margin-top: 3rem;   
 }
 .container-texts{
     position: relative;
-    bottom: 70px;
+    /* bottom: 70px; */
 }
 h1{
-    font-size: 4.65rem;
-    margin: 1rem 0;
+        font-size: 4.65rem;
+        margin: 2rem 0;
+        /* position: relative; */
+        font-family: Impact, sans-serif;
+        letter-spacing: 2px;
+        background: linear-gradient(90deg, #ff2732, #fff, #22282a);
+        background-repeat: no-repeat;
+        background-size: 80%;
+        animation: animate 9s infinite;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
+@keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
 h3{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 3.5rem;
 
 }
 h4{
-    font-size: 1.25rem;
+    font-size: 2rem;
     letter-spacing: 0.12rem;
     color: var(--secondaryColor);
 }
 .social{
-   margin: 0 0 2.5rem 6rem;
+   margin: 0 0 3rem 7rem;
     
 }
 .social img{
@@ -104,68 +128,90 @@ h4{
 .social img:hover{
     transform: scale(1.2);
 }
-.photo-perso img{
-    width: 360px;
-    height: 252px;
-}
+
 /******************A-propos******************************/
 #a-propos{
     background-color: var(--bgColor-2);
     width: 100%;
-    height: 100vh;
+    height: 80vh;
+    
+}
+.a-propos-de-moi{
+  display: flex;
 }
 p{
     font-size: 1.5rem;
-    margin: 2rem;
-   letter-spacing: 1px;
-   line-height: 1.8rem;
+    margin: 4rem;
+    /* -spacing: 2px; */
+    line-height: 1.8rem;
     color: var(--secondaryColor);
-    
-
 }
+.cv{
+    background-color: var(--primaryColor);
+    color: var(--lighColor);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5rem;
+    padding: 0.81rem 1.87rem;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    transition: 0.4s;
+}
+.cv:hover{
+    background-color: transparent;
+    border: 2px solid --primaryColor;
+}
+
+.container-images img{
+    width: 300px;
+    height: 440px;
+    margin-right: 5rem;
+    
+}
+
+
+
 /***********************Compétence*************/
 #Compétence{
     background-color: var(--bgColor-1);
     width: 100%;
     height: 80vh;
+   
   
 }
 .front-end, .back-end{
     text-align: center;
-    /* display: flex; */
-   
-     
-  
+    display: flex;
+    justify-content: space-evenly; 
+    flex-wrap: wrap;
+    margin:40px;
+ 
 }
-
-
-    
-
-/**********************porfolio*************************/
-.portfolio{
-    display: felex;
+/*******************
+************************porfolio*************************/
+#portfolio{
+   
     background: var(--bgColor-2);
-   
+    width: 100%;
+    height: 80vh; 
 }
-
-.gites, .jado{
+.cards{
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly; 
+    flex-wrap: wrap;
+}
+.gites img, .jado img, .défi img {
     width: 360px;
     height: 252px;
-    margin: 2rem 0 0 3rem;
+    margin:40px;    
 }
-.card_title{
-    font-size: 1.5rem;
-    margin-left: 1;
-}
-.cards_inner{
-  margin-right: 5rem;
-}
-
-/********************Contactez MOI************************/
+/******************
+***********************Contactez MOI************************/
 #contactez-moi{
     background-color: var(--bgColor-1);
     width: 100%;
-    height: 700px;
+    height: 80vh;
 }
 h5{
     font-size: 2rem;
@@ -184,6 +230,7 @@ h5{
     border-radius: 10px;
     font-weight: bold;
     margin-top: 1rem;
+    padding: 0 0 0 1rem;
 }
 #Message{
     width: 25rem;
@@ -192,16 +239,238 @@ h5{
     border: 2px solid var(--primaryColor);
     border-radius: 10px;
     font-size: 1.3rem;
+    padding: 0.5rem 0 0 1rem;
 }
+
 #submit{
-    margin-top: 1rem;
-    width: 6rem;
-    height: 2rem;
     background-color: var(--primaryColor);
-    border-radius: 10px;
+    color: var(--lighColor);
+    text-decoration: none;
     font-weight: bold;
+    margin-top: 0.5rem;
+    padding: 0.81rem 1.87rem;
+    border-radius: 10px;
     cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.4s;
+}
+#submit:hover{
+    background-color: transparent;
+    border: 2px solid --primaryColor;
 }
 #cobbler{
     margin-left: 15rem;
+}
+/*****************
+*******************************Footer************/
+.footer{
+    background-color:var(--bgColor-2);
+    width: 100%;
+    height: 50vh;
+}
+/*******************
+*****************************MEDIA QUERIES***********/
+/* @media screen and (max-width: 1025px){  
+    
+    h2{
+        display: none;
+    }
+nav{
+    padding-top: 2.2rem;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li {
+    
+    width: 100%;
+    
+    flex-direction: column;
+    list-style-type: none;
+}
+nav ul li a{
+    text-decoration: none;
+   
+    color: var(--lighColor);
+    text-transform: capitalize;
+    transition: 0.4s;
+}
+nav ul li a:hover{
+    color: var(--primaryColor);
+}
+.btn{
+    flex-direction: column;
+    background-color: var(--primaryColor);
+    color: var(--lighColor);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.81rem 1.87rem;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    transition: 0.4s;
+}
+.btn:hover{
+    background-color: transparent;
+    border: 2px solid --primaryColor;
+}
+#burger {
+    display: block;
+    float: right;
+    /* margin: 10px 0; */
+    /* cursor: pointer;
+ } */
+
+/* #croix {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 55px;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+    width: 1px;
+    height: 10px;
+} */
+
+@media screen and (min-width: 576px) and (max-width: 1311px){
+    :root{
+        --padding: 1.5rem;
+    }
+    html{
+        font-size: 13px;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;
+        background-color: var(--bgColor-1);
+        border-bottom: 1px solid var(--bgColor-2);
+        z-index: 100;
+    }
+    
+    nav ul  {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--bgColor-2);
+    }
+    nav ul li{
+        display: block;
+        text-align: center;
+        margin: 80px;
+    }
+    nav > a, h2 {
+        display: none;
+    }
+    
+    .social{
+        margin-bottom: 70px;
+    }
+    .container-images img{
+        display: none;
+    }
+    .a-propos-de-moi{
+        /* width: 100%; */
+    }
+    #Compétence{
+        width: 100%;
+        height: 140vh;
+    }
+    .front-end, .back-end{
+        text-align: center;
+       display: flex;
+        justify-content: space-between; 
+       flex-direction: column; 
+    }
+    #portfolio{
+        
+        height: 150vh;
+    }
+    #contactez-moi{
+        
+        height: 120vh;
+    }
+    .formulaire, #cobbler{  
+        text-align: center;
+         display: flex;
+         justify-content: space-between; 
+          flex-direction: column; 
+        }
+    }
+    
+@media screen and (max-width: 575px){
+:root{
+    --padding: 1.5rem;
+}
+html{
+    font-size: 13px;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 82px;
+    background-color: var(--bgColor-1);
+    border-bottom: 1px solid var(--bgColor-2);
+    z-index: 100;
+}
+
+nav ul  {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bgColor-2);
+}
+nav ul li{
+    display: block;
+    text-align: center;
+    margin: 80px;
+}
+nav > a, h2 {
+    display: none;
+}
+
+.social{
+    margin-bottom: 70px;
+}
+.container-images img{
+    display: none;
+}
+.a-propos-de-moi{
+    /* width: 100%; */
+}
+#Compétence{
+    width: 100%;
+    height: 140vh;
+}
+.front-end, .back-end{
+    text-align: center;
+   display: flex;
+    justify-content: space-between; 
+   flex-direction: column; 
+}
+#portfolio{
+    
+    height: 150vh;
+}
+#contactez-moi{
+    
+    height: 120vh;
+}
+.formulaire, #cobbler{  
+    text-align: center;
+     display: flex;
+     justify-content: space-between; 
+      flex-direction: column; 
+    }
 }
