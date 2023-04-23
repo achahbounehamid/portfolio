@@ -16,13 +16,16 @@ html{
     font-size: 16px;
     color: var(--lighColor);
 }
-/*********************Accuiel******************/
-.first{
+
+
+    /*********************Accuiel******************/
+#first{
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     background-color: var(--bgColor-1);
     display: flex;
     flex-direction: column;
+    padding-top: 10px;
 }
 span{
     color: var(--primaryColor);
@@ -70,9 +73,7 @@ nav ul li a:hover{
     background-color: transparent;
     border: 2px solid --primaryColor;
 }
-#burger, #croix {
-    display: none;
-  }
+
 /***********************Accueil************************/
 .content{
     flex-grow: 1;
@@ -133,17 +134,21 @@ h4{
 #a-propos{
     background-color: var(--bgColor-2);
     width: 100%;
-    height: 80vh;
+    height: 100vh;
+    
     
 }
 .a-propos-de-moi{
+
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 7rem 0 7rem;
 }
 p{
     font-size: 1.5rem;
     margin: 4rem;
-    /* -spacing: 2px; */
-    line-height: 1.8rem;
+    line-height: 2.8rem;
     color: var(--secondaryColor);
 }
 .cv{
@@ -173,27 +178,28 @@ p{
 
 /***********************Compétence*************/
 #Compétence{
+   
     background-color: var(--bgColor-1);
     width: 100%;
-    height: 80vh;
+    height: 100vh;
    
-  
 }
+
 .front-end, .back-end{
     text-align: center;
     display: flex;
     justify-content: space-evenly; 
     flex-wrap: wrap;
     margin:40px;
- 
 }
+
 /*******************
 ************************porfolio*************************/
 #portfolio{
    
     background: var(--bgColor-2);
     width: 100%;
-    height: 80vh; 
+    height: 100vh; 
 }
 .cards{
     text-align: center;
@@ -204,27 +210,32 @@ p{
 .gites img, .jado img, .défi img {
     width: 360px;
     height: 252px;
-    margin:40px;    
+    margin:40px; 
+    cursor: pointer;
+    box-shadow: 20px 30px 10px 5px rgba(88, 87, 87, 0.37);
 }
+
+
+
 /******************
 ***********************Contactez MOI************************/
 #contactez-moi{
     background-color: var(--bgColor-1);
     width: 100%;
-    height: 80vh;
+    height: 100vh;
 }
 h5{
     font-size: 2rem;
     text-align: center;
-    padding: 2rem;
+    padding: 5rem;
+    
 }
 .formulaire{
-   margin-right: 15rem;
-    float: right;
-   
+   text-align: center;
+
 }
 #firstname, #lastname, #E-mail{
-    width: 25rem;
+    width: 40rem;
     height: 3rem;
     border: 2px solid var(--primaryColor);
     border-radius: 10px;
@@ -233,7 +244,7 @@ h5{
     padding: 0 0 0 1rem;
 }
 #Message{
-    width: 25rem;
+    width: 40rem;
     height: 10rem;
     margin-top: 1rem;
     border: 2px solid var(--primaryColor);
@@ -241,13 +252,12 @@ h5{
     font-size: 1.3rem;
     padding: 0.5rem 0 0 1rem;
 }
-
 #submit{
     background-color: var(--primaryColor);
     color: var(--lighColor);
     text-decoration: none;
     font-weight: bold;
-    margin-top: 0.5rem;
+    margin: 0.5rem 33rem 0 0;
     padding: 0.81rem 1.87rem;
     border-radius: 10px;
     cursor: pointer;
@@ -258,81 +268,62 @@ h5{
     background-color: transparent;
     border: 2px solid --primaryColor;
 }
-#cobbler{
-    margin-left: 15rem;
-}
+
+
 /*****************
 *******************************Footer************/
-.footer{
-    background-color:var(--bgColor-2);
-    width: 100%;
-    height: 50vh;
+footer{
+    padding: 2rem var(--padding);
+    background-color: var(--bgColor-1);
 }
-/*******************
-*****************************MEDIA QUERIES***********/
-/* @media screen and (max-width: 1025px){  
-    
-    h2{
-        display: none;
-    }
-nav{
-    padding-top: 2.2rem;
-    padding-left: var(--padding);
-    padding-right: var(--padding);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.content-footer{
+text-align: center;
+
 }
-nav ul li {
-    
-    width: 100%;
-    
-    flex-direction: column;
-    list-style-type: none;
-}
-nav ul li a{
-    text-decoration: none;
-   
-    color: var(--lighColor);
-    text-transform: capitalize;
-    transition: 0.4s;
-}
-nav ul li a:hover{
-    color: var(--primaryColor);
-}
-.btn{
-    flex-direction: column;
-    background-color: var(--primaryColor);
-    color: var(--lighColor);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.81rem 1.87rem;
-    border-radius: 30px;
-    border: 2px solid transparent;
-    transition: 0.4s;
-}
-.btn:hover{
-    background-color: transparent;
-    border: 2px solid --primaryColor;
-}
-#burger {
-    display: block;
+
+ .btn-btn-default{
     float: right;
-    /* margin: 10px 0; */
-    /* cursor: pointer;
- } */
+    margin-right: 2rem;
 
-/* #croix {
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 55px;
-    margin: 0 10px 0 0;
+    
+}
+/********************HUMBERGER MENU**********************/
+#menu{
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
     cursor: pointer;
-    width: 1px;
-    height: 10px;
-} */
+    user-select: none;
+   
+}
+#menu span{
+    display: none;
+    width: 33px;
+    height: 4px;
+    background-color: var(--lighColor);
+    border-radius: 6px;
+    transform-origin: 0 0;
+    transition: 0.4s;
+    margin-bottom: 5px;
+    
+}
+#menu.is-active span:nth-child(1){
+    transform: translate(0px, -2px) rotate(45deg);
 
+}
+#menu.is-active span:nth-child(2){
+    opacity: 0;
+    transform: translate(15px);
+}
+#menu.is-active span:nth-child(3){
+    transform: translate(-3px, 3px) rotate(-45deg);
+}
+#menu.is-active span{
+    background-color: var(--primaryColor);
+}
+/****************************MEDIA QUERIES**********************/
 @media screen and (min-width: 576px) and (max-width: 1311px){
     :root{
         --padding: 1.5rem;
@@ -350,7 +341,9 @@ nav ul li a:hover{
         border-bottom: 1px solid var(--bgColor-2);
         z-index: 100;
     }
-    
+    nav > a, h2 {
+        display: none;
+    }
     nav ul  {
         display: none;
         position: fixed;
@@ -360,14 +353,30 @@ nav ul li a:hover{
         height: 100vh;
         background: var(--bgColor-2);
     }
+    nav ul.is-active{
+        display: block;
+    }
+   
     nav ul li{
         display: block;
         text-align: center;
         margin: 80px;
     }
-    nav > a, h2 {
-        display: none;
+    #menu span{
+        display: block;
     }
+   
+    /****************
+******Accueil************/
+.content{
+    flex-grow: 1;
+    padding: 0 var(--padding);
+    display: flex;
+    align-items: center;
+   
+    margin-top: 3rem;   
+}
+
     
     .social{
         margin-bottom: 70px;
@@ -375,26 +384,28 @@ nav ul li a:hover{
     .container-images img{
         display: none;
     }
-    .a-propos-de-moi{
-        /* width: 100%; */
-    }
+   
     #Compétence{
         width: 100%;
-        height: 140vh;
+        height: 90vh;
     }
     .front-end, .back-end{
         text-align: center;
-       display: flex;
+        display: flex;
         justify-content: space-between; 
-       flex-direction: column; 
+       flex-direction: wrap; 
     }
     #portfolio{
-        
-        height: 150vh;
+        width: 100%;
+        height: 80vh;
+    }
+    .gites img, .jado img, .défi img {
+        width: 200px;
+        height: 150px;
     }
     #contactez-moi{
-        
-        height: 120vh;
+        width: 100%;
+        height: 90vh;
     }
     .formulaire, #cobbler{  
         text-align: center;
@@ -402,7 +413,12 @@ nav ul li a:hover{
          justify-content: space-between; 
           flex-direction: column; 
         }
-    }
+        .btn-btn-default{
+            display: none;
+        }
+  
+}
+
     
 @media screen and (max-width: 575px){
 :root{
@@ -421,6 +437,9 @@ nav{
     border-bottom: 1px solid var(--bgColor-2);
     z-index: 100;
 }
+nav > a, h2 {
+    display: none;
+}
 
 nav ul  {
     display: none;
@@ -431,13 +450,22 @@ nav ul  {
     height: 100vh;
     background: var(--bgColor-2);
 }
+nav ul.is-active{
+    display: block;
+}
 nav ul li{
     display: block;
     text-align: center;
     margin: 80px;
 }
-nav > a, h2 {
-    display: none;
+
+#menu span{
+    display: block;
+}
+/****************
+******Accueil************/
+.content{
+    text-align: center;
 }
 
 .social{
@@ -446,31 +474,53 @@ nav > a, h2 {
 .container-images img{
     display: none;
 }
-.a-propos-de-moi{
-    /* width: 100%; */
+/**************A propos de moi******/
+.a-propos-texts{
+    padding-bottom: 5rem;
 }
+/***********Compétence**********/
+#a-propos{
+    width: 100%;
+    height: 130vh;
+}
+.html img, .css img, .js img, .php img, .sql img, .python img{
+    width: 80px;
+    height: 100px;
+}
+/****************Compétence***************/
 #Compétence{
     width: 100%;
     height: 140vh;
 }
 .front-end, .back-end{
     text-align: center;
-   display: flex;
+    display: flex;
     justify-content: space-between; 
    flex-direction: column; 
 }
+.gites img, .jado img, .défi img {
+    width: 200px;
+    height: 220px;
+}
+
+/*****************Portfolio****************/
 #portfolio{
-    
-    height: 150vh;
+    width: 100%;
+    height: 180vh;
 }
+
+/******************contactez moi***********/
 #contactez-moi{
-    
-    height: 120vh;
+    width: 100%;
+    height: 80vh;
 }
-.formulaire, #cobbler{  
+.formulaire{
     text-align: center;
-     display: flex;
-     justify-content: space-between; 
-      flex-direction: column; 
-    }
+ 
+ }
+
+.btn-btn-default{
+    display: none;
+}
+
 }

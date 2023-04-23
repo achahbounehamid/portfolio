@@ -1,13 +1,17 @@
-let btBurger = document.getElementById('burger');
-let mainMenu = document.getElementById('main-menu');
-let closeMainMenu = document.getElementById('croix');
+const menu = document.getElementById("menu");
+const action  = document.getElementById("actions");
+menu.addEventListener("click", ()=>{
+hundLeMenu();
 
-btBurger.addEventListener('click',function(){
-    mainMenu.classList.toggle('active');
-    
 });
+function hundLeMenu(){
+    menu.classList.toggle("is-active");
+    action.classList.toggle("is-active");
+}
 
-closeMainMenu.addEventListener('click',function(){
-     mainMenu.classList.toggle('active');
-    
-});
+
+
+
+
+
+
