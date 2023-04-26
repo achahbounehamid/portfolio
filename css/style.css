@@ -9,16 +9,18 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;   
+}
+.row-limit-size {
+    max-width: 1400px;
+    width: 100%; 
 }
 html{
     font-family: 'josefin Sans', sans-serif;
     font-size: 16px;
-    color: var(--lighColor);
+    color: var(--lighColor);    
 }
-
-
-    /*********************Accuiel******************/
+    /*********************Accueil******************/
 #first{
     width: 100%;
     height: 100vh;
@@ -50,7 +52,7 @@ nav ul li {
     margin: 0.8rem 1.5rem;
 }
 nav ul li a{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-decoration: none;
     color: var(--lighColor);
     text-transform: capitalize;
@@ -64,7 +66,7 @@ nav ul li a:hover{
     color: var(--lighColor);
     text-decoration: none;
     font-weight: bold;
-    padding: 0.81rem 1.87rem;
+    padding: 0.5rem 1.2rem;
     border-radius: 30px;
     border: 2px solid transparent;
     transition: 0.4s;
@@ -134,19 +136,24 @@ h4{
 #a-propos{
     background-color: var(--bgColor-2);
     width: 100%;
-    height: 100vh;
     
-    
+      
 }
 .a-propos-de-moi{
-
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 0 7rem 0 7rem;
+  padding: 0 9rem 0 7rem;
+
+}
+.a-propos-texts{
+    margin-bottom: 0;
+}
+.container-images img{
+    margin-bottom: 3rem;
 }
 p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 4rem;
     line-height: 2.8rem;
     color: var(--secondaryColor);
@@ -170,18 +177,14 @@ p{
 .container-images img{
     width: 300px;
     height: 440px;
-    margin-right: 5rem;
-    
+    margin-right: 5rem;   
 }
-
-
-
 /***********************Compétence*************/
 #Compétence{
    
     background-color: var(--bgColor-1);
     width: 100%;
-    height: 100vh;
+    height: 80vh;
    
 }
 
@@ -191,11 +194,13 @@ p{
     justify-content: space-evenly; 
     flex-wrap: wrap;
     margin:40px;
+    cursor: pointer;
 }
+
 
 /*******************
 ************************porfolio*************************/
-#portfolio{
+#projet{
    
     background: var(--bgColor-2);
     width: 100%;
@@ -222,12 +227,12 @@ p{
 #contactez-moi{
     background-color: var(--bgColor-1);
     width: 100%;
-    height: 100vh;
+    height: 85h;
 }
 h5{
     font-size: 2rem;
     text-align: center;
-    padding: 5rem;
+    padding: 1rem;
     
 }
 .formulaire{
@@ -323,8 +328,91 @@ text-align: center;
 #menu.is-active span{
     background-color: var(--primaryColor);
 }
-/****************************MEDIA QUERIES**********************/
-@media screen and (min-width: 576px) and (max-width: 1311px){
+/****************************MEDIA QUERIES **********************/
+@media screen and (max-width: 1316px){
+    nav ul li a{
+        font-size: 1rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    /************a propos de moi*******/
+.a-propos-de-moi{
+    margin-top: -6rem;
+}
+/*****projet***************/
+.gites img, .jado img, .défi img {
+    width: 250px;
+    height: 150px;
+}
+
+/***************formulaire*********/
+#firstname, #lastname, #E-mail{
+    width: 40%;    
+}
+#Message{
+    width: 40%;
+}
+#submit{
+    margin: 0.5rem 33rem 0 7rem;
+}
+}
+@media screen and (max-width: 1122px){
+
+    /************a propos de moi*******/
+.a-propos-texts p{
+ font-size: 1rem;
+}
+.container-images img {
+        width: 286px;
+}
+.cv{
+    padding: 0.81rem 0.87rem;
+     
+}
+    /****************formulaire******************/
+.submit{
+    margin-left: 6rem;
+}
+    
+}
+@media screen and (max-width: 962px){
+    nav ul li a{
+        font-size: 0.8rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+
+    .a-propos-texts p{
+        font-size: 0.8rem;
+        margin: 1rem 0 1rem 0;
+           }
+           .container-images img {
+               /* width: 275px; */
+               height: 350px;
+           }
+           .cv{
+           margin-right: 2rem;
+           font-size: 1rem ;
+         }
+}
+@media screen and (max-width: 926px){
+    /***********projets**********/
+    #projet{
+        height: 80vh;
+    }
+    .gites img, .jado img, .défi img {
+        width: 200px;
+        height: 190px;
+}
+/**************formulaire**************/
+.submit{
+    margin-left: 10rem;
+}
+}
+
+@media screen and (min-width: 576px) and (max-width: 949px){
     :root{
         --padding: 1.5rem;
     }
@@ -362,6 +450,9 @@ text-align: center;
         text-align: center;
         margin: 80px;
     }
+    nav ul li a{
+        font-size: 1.5rem;
+    }
     #menu span{
         display: block;
     }
@@ -375,51 +466,66 @@ text-align: center;
     align-items: center;
    
     margin-top: 3rem;   
-}
-
-    
-    .social{
+}  
+.social{
         margin-bottom: 70px;
-    }
-    .container-images img{
+}
+.container-images img{
         display: none;
-    }
-   
-    #Compétence{
+}
+/************a propos***********/
+.a-propos-de-moi {
+   width: 100%;
+   height: 80vh;
+}
+.a-propos-de-moi p{
+   font-size: 1.8rem;
+   margin-bottom: 5rem;
+}
+.cv{
+margin: 0;
+
+}
+/***************compétence*********************/
+#Compétence{
         width: 100%;
         height: 90vh;
-    }
-    .front-end, .back-end{
+}
+.front-end, .back-end{
         text-align: center;
         display: flex;
         justify-content: space-between; 
        flex-direction: wrap; 
-    }
-    #portfolio{
-        width: 100%;
+}
+/********************projets************************/
+#projet{
         height: 80vh;
-    }
-    .gites img, .jado img, .défi img {
-        width: 200px;
-        height: 150px;
-    }
-    #contactez-moi{
-        width: 100%;
+}
+.gites img, .jado img, .défi img {
+        width: 230px;
+        height: 190px;
+}
+#contactez-moi{
+        /* width: 100%; */
         height: 90vh;
-    }
-    .formulaire, #cobbler{  
-        text-align: center;
-         display: flex;
-         justify-content: space-between; 
-          flex-direction: column; 
-        }
-        .btn-btn-default{
-            display: none;
-        }
-  
 }
 
+/***************formulaire*********/
+#firstname, #lastname, #E-mail{
+    width: 50%;
+    height: 3rem;
     
+}
+#Message{
+    width: 50%;
+}
+#submit{
+    margin: 0.5rem 33rem 0 5rem;
+}
+.submit{
+    margin-right: 6rem;
+} 
+}
 @media screen and (max-width: 575px){
 :root{
     --padding: 1.5rem;
@@ -503,15 +609,15 @@ nav ul li{
     height: 220px;
 }
 
-/*****************Portfolio****************/
-#portfolio{
+/*****************projet****************/
+#projet{
     width: 100%;
     height: 180vh;
 }
 
 /******************contactez moi***********/
 #contactez-moi{
-    width: 100%;
+   
     height: 80vh;
 }
 .formulaire{
