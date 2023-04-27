@@ -288,10 +288,9 @@ text-align: center;
 
  .btn-btn-default{
     float: right;
-    margin-right: 2rem;
-
-    
+    margin-right: 2rem;   
 }
+
 /********************HUMBERGER MENU**********************/
 #menu{
     position: relative;
@@ -347,7 +346,7 @@ text-align: center;
 }
 
 /***************formulaire*********/
-#firstname, #lastname, #E-mail{
+/* #firstname, #lastname, #E-mail{
     width: 40%;    
 }
 #Message{
@@ -356,7 +355,7 @@ text-align: center;
 #submit{
     margin: 0.5rem 33rem 0 7rem;
 }
-}
+} */
 @media screen and (max-width: 1122px){
 
     /************a propos de moi*******/
@@ -383,7 +382,13 @@ text-align: center;
     h2{
         font-size: 1rem;
     }
-
+    #a-propos{
+        height: auto;
+    }
+    .a-propos-texts{
+        padding: inherit;
+        margin-top: 6rem;
+    }
     .a-propos-texts p{
         font-size: 0.8rem;
         margin: 1rem 0 1rem 0;
@@ -412,7 +417,7 @@ text-align: center;
 }
 }
 
-@media screen and (min-width: 576px) and (max-width: 949px){
+@media screen and (max-width: 949px){
     :root{
         --padding: 1.5rem;
     }
@@ -476,7 +481,7 @@ text-align: center;
 /************a propos***********/
 .a-propos-de-moi {
    width: 100%;
-   height: 80vh;
+   height: auto;
 }
 .a-propos-de-moi p{
    font-size: 1.8rem;
@@ -526,7 +531,7 @@ margin: 0;
     margin-right: 6rem;
 } 
 }
-@media screen and (max-width: 575px){
+@media screen and (min-width: 576px) and (max-width: 948px){
 :root{
     --padding: 1.5rem;
 }
@@ -584,7 +589,7 @@ nav ul li{
 .a-propos-texts{
     padding-bottom: 5rem;
 }
-/***********Compétence**********/
+/*********** A-PROPOS**********/
 #a-propos{
     width: 100%;
     height: 130vh;
@@ -617,7 +622,7 @@ nav ul li{
 
 /******************contactez moi***********/
 #contactez-moi{
-   
+   width: 100%;
     height: 80vh;
 }
 .formulaire{
@@ -629,4 +634,168 @@ nav ul li{
     display: none;
 }
 
+}
+@media screen and (min-width: 320px) and (max-width: 559px){
+    :root{
+        --padding: 1.5rem;
+    }
+    html{
+        font-size: 10px;
+    }
+    nav{
+        height: 80px;
+    }
+    /********ACCUEIL**************/
+#first{
+    height: auto;
+}
+nav {
+    height: 80px;
+    position: inherit;
+}
+nav ul {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 100vh;
+    background: var(--bgColor-2);
+}
+#menu span {
+ 
+    width: 25px;
+    height: 4px;
+    background-color: var(--lighColor);
+    border-radius: 6px;
+    transform-origin: 0 0;
+    transition: 0.4s;
+    margin-bottom: 5px;
+}
+h4{
+    font-size: 1.5rem;
+    
+}
+h1{
+font-size: 3.5rem;
+width: 300px;
+}
+h3{
+    font-size: 1.6rem;
+    width: 300px;
+   
+}
+.content {
+    display: flex;
+    flex-direction: column;  
+}
+container-texts {
+    position: relative;
+    width: 450px;
+    padding: 20px;
+    height: auto;
+    margin-top: 10px;
+}
+
+    .social {
+        /* display: flex;
+        justify-content: center;
+        width: 318px; */
+        margin: 0 auto;
+    }
+
+
+/****************A PROPOS***********/
+h5{
+    font-size: 1.5rem;
+}
+.a-propos-de-moi{
+  padding: inherit; 
+  
+    
+}
+.a-propos-texts{
+    padding: inherit;
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.a-propos-texts p {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    padding: 10px;
+     text-align: left;
+    font-size: 1.4rem;
+    
+
+}
+.cv {
+    margin-bottom: 20px;
+}
+/******************COMPETENCES******************/
+#Compétence{
+    height: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.front-end, .back-end{
+    text-align: center;
+    display: flex;
+    justify-content: space-between; 
+    flex-direction: column;
+    margin:inherit;
+    cursor: pointer;
+}
+.html img, .css img, .js img, .php img, .sql img, .python img {
+    width: 80px;
+    height: 90px;
+}
+
+/******************PROJETS*****/
+#projet{
+height: auto;
+}
+
+/***************FORMULAIRE**************/
+#contactez-moi{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+.formulaire {
+    text-align: center;
+    height: auto;
+    width: 350px;
+}
+ #firstname, #lastname, #E-mail, #Message {
+    width: 200px;
+}
+#submit{
+margin-left: 80px;
+    
+}
+.btn-btn-default{
+    display: none;
+}
+footer{
+    height: 80px;
+    padding: 0;
+}
+.content-footer p{
+    align-items: center;
+    height: 20px;
+    margin: 00px;
+    padding-top: 20px;
+   
+}
 }
