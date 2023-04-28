@@ -22,8 +22,8 @@ html{
 }
     /*********************Accueil******************/
 #first{
-    width: 100%;
-    height: 100vh;
+   
+    overflow: auto;
     background-color: var(--bgColor-1);
     display: flex;
     flex-direction: column;
@@ -78,6 +78,7 @@ nav ul li a:hover{
 
 /***********************Accueil************************/
 .content{
+    overflow: auto;
     flex-grow: 1;
     padding: 0 var(--padding);
     display: flex;
@@ -97,7 +98,7 @@ h1{
         background: linear-gradient(90deg, #ff2732, #fff, #22282a);
         background-repeat: no-repeat;
         background-size: 80%;
-        animation: animate 9s infinite;
+        animation: animate 10s infinite;
         -webkit-background-clip: text;
         -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
@@ -136,6 +137,7 @@ h4{
 #a-propos{
     background-color: var(--bgColor-2);
     width: 100%;
+    overflow: auto;
     
       
 }
@@ -184,7 +186,7 @@ p{
    
     background-color: var(--bgColor-1);
     width: 100%;
-    height: 80vh;
+   overflow: auto;
    
 }
 
@@ -199,12 +201,14 @@ p{
 
 
 /*******************
-************************porfolio*************************/
+************************porjets*************************/
 #projet{
    
     background: var(--bgColor-2);
     width: 100%;
-    height: 100vh; 
+    overflow: auto;
+    padding-bottom: 40px;
+   
 }
 .cards{
     text-align: center;
@@ -258,6 +262,9 @@ h5{
     padding: 0.5rem 0 0 1rem;
 }
 #submit{
+    margin-top: 1.5rem;
+}
+#submit a{
     background-color: var(--primaryColor);
     color: var(--lighColor);
     text-decoration: none;
@@ -268,8 +275,10 @@ h5{
     cursor: pointer;
     border: 2px solid transparent;
     transition: 0.4s;
+    
 }
-#submit:hover{
+
+#submit a:hover{
     background-color: transparent;
     border: 2px solid --primaryColor;
 }
@@ -288,7 +297,7 @@ text-align: center;
 
  .btn-btn-default{
     float: right;
-    margin-right: 2rem;   
+    margin-right: 2rem;
 }
 
 /********************HUMBERGER MENU**********************/
@@ -335,9 +344,14 @@ text-align: center;
     h2{
         font-size: 1.5rem;
     }
+    
     /************a propos de moi*******/
 .a-propos-de-moi{
     margin-top: -6rem;
+}
+.a-propos-de-moi p{  
+margin-top: 48px;
+margin-bottom: 50px;
 }
 /*****projet***************/
 .gites img, .jado img, .défi img {
@@ -354,16 +368,25 @@ text-align: center;
 }
 #submit{
     margin: 0.5rem 33rem 0 7rem;
-}
-} */
+}*/
+} 
 @media screen and (max-width: 1122px){
 
     /************a propos de moi*******/
+.a-propos-texts{  
+    margin-top: 43px;
+}
 .a-propos-texts p{
  font-size: 1rem;
+ margin: 0;
+ padding-bottom: 2rem;
+}
+.a-propos-texts a{
+    margin: 0;
+
 }
 .container-images img {
-        width: 286px;
+        width: 280px;
 }
 .cv{
     padding: 0.81rem 0.87rem;
@@ -374,6 +397,14 @@ text-align: center;
     margin-left: 6rem;
 }
     
+}
+@media screen and (max-width: 962px){
+  
+    .a-propos-texts p{ 
+    padding-bottom: 10px;
+    width: 351px;
+}
+
 }
 @media screen and (max-width: 962px){
     nav ul li a{
@@ -403,6 +434,10 @@ text-align: center;
          }
 }
 @media screen and (max-width: 926px){
+    /************container-texts**********/
+    .container-texts{
+        margin-top: 80px;
+    }
     /***********projets**********/
     #projet{
         height: 80vh;
@@ -416,7 +451,6 @@ text-align: center;
     margin-left: 10rem;
 }
 }
-
 @media screen and (max-width: 949px){
     :root{
         --padding: 1.5rem;
@@ -461,7 +495,6 @@ text-align: center;
     #menu span{
         display: block;
     }
-   
     /****************
 ******Accueil************/
 .content{
@@ -469,7 +502,6 @@ text-align: center;
     padding: 0 var(--padding);
     display: flex;
     align-items: center;
-   
     margin-top: 3rem;   
 }  
 .social{
@@ -484,12 +516,13 @@ text-align: center;
    height: auto;
 }
 .a-propos-de-moi p{
-   font-size: 1.8rem;
-   margin-bottom: 5rem;
+   font-size: 1.7rem;
+   margin: 0;
+   width: 100%;
+    padding-bottom: 2rem;
 }
 .cv{
 margin: 0;
-
 }
 /***************compétence*********************/
 #Compétence{
@@ -514,7 +547,6 @@ margin: 0;
         /* width: 100%; */
         height: 90vh;
 }
-
 /***************formulaire*********/
 #firstname, #lastname, #E-mail{
     width: 50%;
@@ -531,6 +563,7 @@ margin: 0;
     margin-right: 6rem;
 } 
 }
+
 @media screen and (min-width: 576px) and (max-width: 948px){
 :root{
     --padding: 1.5rem;
@@ -551,7 +584,6 @@ nav{
 nav > a, h2 {
     display: none;
 }
-
 nav ul  {
     display: none;
     position: fixed;
@@ -569,7 +601,6 @@ nav ul li{
     text-align: center;
     margin: 80px;
 }
-
 #menu span{
     display: block;
 }
@@ -578,7 +609,9 @@ nav ul li{
 .content{
     text-align: center;
 }
-
+.container-texts{
+    margin-top: 80px;
+}
 .social{
     margin-bottom: 70px;
 }
@@ -592,7 +625,8 @@ nav ul li{
 /*********** A-PROPOS**********/
 #a-propos{
     width: 100%;
-    height: 130vh;
+    /* height: 130vh; */
+    overflow: auto;
 }
 .html img, .css img, .js img, .php img, .sql img, .python img{
     width: 80px;
@@ -602,6 +636,7 @@ nav ul li{
 #Compétence{
     width: 100%;
     height: 140vh;
+    
 }
 .front-end, .back-end{
     text-align: center;
@@ -613,27 +648,28 @@ nav ul li{
     width: 200px;
     height: 220px;
 }
-
 /*****************projet****************/
 #projet{
     width: 100%;
     height: 180vh;
 }
-
 /******************contactez moi***********/
 #contactez-moi{
    width: 100%;
-    height: 80vh;
+    height: 0vh;
 }
 .formulaire{
     text-align: center;
- 
  }
-
+ #submit {
+    padding-top: 10px;
+ }
+ #submit a{
+   margin-left: 9.5rem;
+ }
 .btn-btn-default{
     display: none;
 }
-
 }
 @media screen and (min-width: 320px) and (max-width: 559px){
     :root{
@@ -647,9 +683,10 @@ nav ul li{
     }
     /********ACCUEIL**************/
 #first{
-    height: auto;
+   overflow: auto;
 }
 nav {
+   
     height: 80px;
     position: inherit;
 }
@@ -658,13 +695,12 @@ nav ul {
     position: fixed;
     top: 0;
     left: 0;
-    width: 320px;
+    width: 500px;
     height: 100vh;
     background: var(--bgColor-2);
 }
 #menu span {
- 
-    width: 25px;
+    width: 30px;
     height: 4px;
     background-color: var(--lighColor);
     border-radius: 6px;
@@ -673,8 +709,7 @@ nav ul {
     margin-bottom: 5px;
 }
 h4{
-    font-size: 1.5rem;
-    
+    font-size: 1.5rem;   
 }
 h1{
 font-size: 3.5rem;
@@ -688,31 +723,35 @@ h3{
 .content {
     display: flex;
     flex-direction: column;  
+    margin: 0;
+
 }
-container-texts {
+.container-texts {
     position: relative;
     width: 450px;
     padding: 20px;
     height: auto;
     margin-top: 10px;
 }
-
+.a-propos-texts p {
+    font-size: 1.7rem;
+    margin: 0;
+    width: 100%;
+    padding: 2rem 0 2rem 0;
+  }
     .social {
-        /* display: flex;
-        justify-content: center;
-        width: 318px; */
         margin: 0 auto;
+        padding-bottom: 2rem;
     }
-
-
 /****************A PROPOS***********/
+#a-propos{
+    height: 65vh;
+}
 h5{
     font-size: 1.5rem;
 }
 .a-propos-de-moi{
-  padding: inherit; 
-  
-    
+  padding: inherit;    
 }
 .a-propos-texts{
     padding: inherit;
@@ -721,7 +760,6 @@ h5{
     flex-direction: column;
     align-items: center;
 }
-
 .a-propos-texts p {
     width: 300px;
     display: flex;
@@ -733,12 +771,8 @@ h5{
     padding: 10px;
      text-align: left;
     font-size: 1.4rem;
-    
+}
 
-}
-.cv {
-    margin-bottom: 20px;
-}
 /******************COMPETENCES******************/
 #Compétence{
     height: auto;
@@ -778,10 +812,11 @@ height: auto;
     width: 350px;
 }
  #firstname, #lastname, #E-mail, #Message {
-    width: 200px;
+    width: 250px;
 }
 #submit{
-margin-left: 80px;
+margin-left: 50px;
+padding-top: 10px;
     
 }
 .btn-btn-default{
@@ -795,7 +830,6 @@ footer{
     align-items: center;
     height: 20px;
     margin: 00px;
-    padding-top: 20px;
-   
+    padding-top: 20px;  
 }
 }
