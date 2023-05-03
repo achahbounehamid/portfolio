@@ -138,17 +138,18 @@ h4{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 0 9rem 0 7rem;
+  /* padding: 2rem; */
 
 }
 .a-propos-texts{
     margin-bottom: 0;
 }
 .container-images img{
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
 }
-p{
-    font-size: 1.2rem;
+.a-propos-de-moi p{
+    font-size: 1.4rem;
     margin: 4rem;
     line-height: 2.8rem;
     color: var(--secondaryColor);
@@ -158,7 +159,7 @@ p{
     color: var(--lighColor);
     text-decoration: none;
     font-weight: bold;
-    margin: 5rem;
+    margin: 3rem;
     padding: 0.81rem 1.87rem;
     border-radius: 30px;
     border: 2px solid transparent;
@@ -179,6 +180,9 @@ p{
     width: 100%;
     height: 100vh;  
 }
+
+
+
 .front-end, .back-end{
     text-align: center;
     display: flex;
@@ -187,6 +191,15 @@ p{
     margin:35px;
     padding-top: 40px;
     cursor: pointer;
+   
+}
+.front-end img, .back-end img{
+    transition: transform .1s;
+}
+.front-end img:hover, .back-end img:hover {
+    -ms-transform: scale(1.5);
+   -webkit-transform: scale(1.5); 
+   transform: scale(1.5);
 }
 /*******************
 ************************porjets*************************/
@@ -211,27 +224,21 @@ p{
     cursor: pointer;
     box-shadow: 20px 30px 10px 5px rgba(88, 87, 87, 0.37);
 }
-
-
-
 /******************
 ***********************Contactez MOI************************/
 #contactez-moi{
     background-color: var(--bgColor-1);
-    width: 100%;
-   
+    width: 100%; 
 }
 h5{
     font-size: 2rem;
     text-align: center;
-    padding: 1rem;
-    
+    padding: 2rem;   
 }
 .formulaire{
    text-align: center;
-
 }
-#firstname, #lastname, #E-mail{
+#firstname, #lastname, #mail{
     width: 40rem;
     height: 3rem;
     border: 2px solid var(--primaryColor);
@@ -262,16 +269,13 @@ h5{
     border-radius: 10px;
     cursor: pointer;
     border: 2px solid transparent;
-    transition: 0.4s;
-    
+    transition: 0.4s;  
 }
 
 #submit a:hover{
     background-color: transparent;
     border: 2px solid --primaryColor;
 }
-
-
 /*****************
 *******************************Footer************/
 footer{
@@ -282,12 +286,10 @@ footer{
 text-align: center;
 
 }
-
  .btn-btn-default{
     float: right;
     margin-right: 2rem;
 }
-
 /********************HUMBERGER MENU**********************/
 #menu{
     position: relative;
@@ -297,7 +299,6 @@ text-align: center;
     background: none;
     cursor: pointer;
     user-select: none;
-   
 }
 #menu span{
     display: none;
@@ -331,15 +332,15 @@ text-align: center;
     }
     h2{
         font-size: 1.5rem;
-    }
-    
+    }  
     /************a propos de moi*******/
 .a-propos-de-moi{
     margin-top: -6rem;
 }
-.a-propos-de-moi p{  
+p{  
 margin-top: 48px;
 margin-bottom: 50px;
+line-height: 2.2rem;
 }
 /*****projet***************/
 .gites img, .jado img, .défi img {
@@ -348,7 +349,6 @@ margin-bottom: 50px;
 }
 } 
 @media screen and (max-width: 1122px){
-
     /************a propos de moi*******/
 .a-propos-texts{  
     margin-top: 43px;
@@ -357,6 +357,11 @@ margin-bottom: 50px;
  font-size: 1rem;
  margin: 0;
  padding-bottom: 2rem;
+}
+.a-propos-texts p{
+    font-size: 1.1rem;
+    line-height: 2.2rem;
+    color: var(--secondaryColor);
 }
 .a-propos-texts a{
     margin: 0;
@@ -376,20 +381,16 @@ margin-bottom: 50px;
 .front-end img, .back-end img{
     margin: 10px; 
 }
-
-    /****************formulaire******************/
+   /****************formulaire******************/
 .submit{
     margin-left: 6rem;
-}
-    
+}  
 }
 @media screen and (max-width: 962px){
-  
     .a-propos-texts p{ 
     padding-bottom: 10px;
     width: 351px;
 }
-
 }
 @media screen and (max-width: 962px){
     nav ul li a{
@@ -419,11 +420,15 @@ margin-bottom: 50px;
          }
 }
 @media screen and (max-width: 926px){
-    /************container-texts**********/
+    /************ACCUEIL**********/
     .container-texts{
         margin-top: 80px;
     }
-    /***********projets**********/
+    .social {
+        margin: 0 0 3rem 7rem;
+        text-align: center;
+     }
+/***********projets**********/
     #projet{
         height: 80vh;
     }
@@ -447,7 +452,7 @@ margin-bottom: 50px;
         position: fixed;
         top: 0;
         left: 0;
-        right: 0;
+       
         height: 82px;
         background-color: var(--bgColor-1);
         border-bottom: 1px solid var(--bgColor-2);
@@ -492,6 +497,7 @@ margin-bottom: 50px;
 }  
 .social{
         margin-bottom: 70px;
+        text-align: center;
 }
 .container-images img{
         display: none;
@@ -534,7 +540,7 @@ margin: 0;
         height: 90vh;
 }
 /***************formulaire*********/
-#firstname, #lastname, #E-mail{
+#firstname, #lastname, #mail{
     width: 50%;
     height: 3rem;
     
@@ -549,7 +555,6 @@ margin: 0;
     margin-right: 6rem;
 } 
 }
-
 @media screen and (min-width: 576px) and (max-width: 948px){
 :root{
     --padding: 1.5rem;
@@ -561,7 +566,7 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    
     height: 82px;
     background-color: var(--bgColor-1);
     border-bottom: 1px solid var(--bgColor-2);
@@ -597,6 +602,12 @@ nav ul li{
 }
 .container-texts{
     margin-top: 80px;
+}
+.a-propos-texts p { 
+line-height: 2.1rem;
+}
+h4{
+    text-align: center;
 }
 .social{
     margin-bottom: 70px;
@@ -655,16 +666,19 @@ nav ul li{
     text-align: center;
  }
  #submit {
-    padding-top: 10px;
+    
+        margin-left: 2rem;
+        padding-top: 2rem;
+    
  }
  #submit a{
-   margin-left: 9.5rem;
+   /* margin-left: 9.5rem; */
  }
 .btn-btn-default{
     display: none;
 }
 }
-@media screen and (min-width: 320px) and (max-width: 559px){
+@media screen and (min-width: 320px) and (max-width: 558px){
     :root{
         --padding: 1.5rem;
     }
@@ -702,15 +716,15 @@ nav ul {
     margin-bottom: 5px;
 }
 h4{
-    font-size: 1.5rem;   
+    font-size: 2rem;   
 }
 h1{
 font-size: 4.5rem;
-width: 300px;
+width: 200px;
 }
 h3{
-    font-size: 1.7rem;
-    width: 300px;
+    font-size: 2rem;
+    /* width: 400px; */
     margin-right: 2rem;
    
 }
@@ -722,10 +736,10 @@ h3{
 }
 .container-texts {
     position: relative;
-    width: 450px;
-    padding: 20px;
+    /* width: 450px;
+    padding: 80px; */
     height: auto;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     text-align: center;
 }
 .a-propos-texts p {
@@ -799,20 +813,33 @@ height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 10px;
+    width: 100%;
+    /* padding-top: 10px; */
 }
+
 .formulaire {
     text-align: center;
     height: auto;
-    width: 350px;
+    width: 300px;
 }
- #firstname, #lastname, #E-mail, #Message {
+ #firstname, #lastname, #mail, #Message {
     width: 250px;
 }
-#submit{
-margin-left: 50px;
-padding-top: 10px;
-    
+#submit {
+    /* margin-left: 2rem; */
+    padding-top: 2rem;
+    margin: inherit;
+}
+#submit a {
+    background-color: var(--primaryColor);
+    color: var(--lighColor);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.4s;
+    margin: inherit;
 }
 .btn-btn-default{
     display: none;

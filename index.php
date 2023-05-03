@@ -25,7 +25,7 @@
         
         <nav>
   
-          <h2>Portfolio <span>.</span></h2>
+          <h2>P<span>.</span>F</h2>
           <ul id="actions">
             <li><a href="#first">accueil</a></li>
             <li><a href="#a-propos">a propos</a></li>
@@ -62,11 +62,14 @@
         <h5 >A  propos de <span>Moi</span></h5>
         <div class="a-propos-de-moi">
             <div class="a-propos-texts"> 
-                <p>Après plusieurs années d'études et une session de programation informatique à Québec au Canada.<br>
-                  En pleine reconversion professionnelle, j'ai décidé de me diriger vers  un domaine pour lequel je me suis découvert une passion,
-                  le déveleppement web et web mobile.
+                <p>Après plusieurs années d'études et une session de
+                  programmation informatique <br> au Canada à Québec,
+                  je me suis découvert une passion pour le développement.<br>
+                  En pleine reconversion professionnelle, j'ai décidé de me
+                  diriger dans cette voie <br> et d'entreprendre une formation
+                  afin de concrétiser mon projet professionnel.
                 </p>
-                <a href="#" class="cv">Télécharger CV</a>    
+                <a href="./CV HAMID 2023.pdf " target="_blank"" class="cv">Télécharger CV</a>    
             </div>
             <div class="container-images">
               <img src="./img/photo-hamid.png" alt="photo">
@@ -106,14 +109,15 @@
         <h5>Projet<span>s</span></h5>
           <div class="cards">
               <figure class="gites">
-                  <img src="./img/Gites-Marhaba.png" alt="" ><br><span> Mon premier projet one-page <br> en HTML5/CSS3</span>      
+                  <a href="http://gites/" target="_blank"><img src="./img/Gites-Marhaba.png" alt="gites" ><br><span> Mon premier projet one-page <br> en HTML5/CSS3</span></a>
               </figure>
 
                 <figure class="jado">
-                  <img src="./img/jado.png" alt="" ><br><span>Création d'un site web resturant sushi <br> en HTML5/CSS3 responsive design</span>
+                  <a href="http://jadoo/" target="_blank"><img src="./img/jado.png" alt="jado" ><br><span>Création d'un site web resturant sushi <br> en HTML5/CSS3 responsive design</span></a>
                 </figure>
+
                 <figure class="défi">
-                  <img src="./img/desparition-défi-js.png" alt=""><br> <span>Un défi en javascript</span>
+                  <a href="http://localhost/js/dispertion/" target="_blank"><img src="./img/desparition-défi-js.png" alt="défi"><br><span>Un défi en javascript</span></a>
                 </figure>
           </div> 
 
@@ -122,27 +126,45 @@
         <h5>Contactez <span>Moi</span></h5>
 
             <div class="formulaire"> 
-              <form action="#" method="" >
+              <form action="#" method="POST" >
                     <label for="firstname">
                       <input type="text" name="firstname" placeholder="Nom" id="firstname">
                   </label><br>
                   <label for="lastname">
-                    <input type="text" name="lasttname" placeholder="Prénom" id="lastname">
+                    <input type="text" name="lastname" placeholder="Prénom" id="lastname">
                 </label><br>
                 <label for="E-mail">
-                  <input type="email" name="E-mail" placeholder="E-mail" id="E-mail">
+                  <input type="email" name="mail" placeholder="E-mail" id="mail">
                 </label><br>
                 
                   <label for="Message">
-                    <textarea id="Message" name="Message" placeholder="Message" itemid="Message"></textarea>
+                    <textarea id="Message" name="Message" placeholder="Message" id="Message"></textarea>
                   </label>  
 
                 <div  id="submit">      
-                  <a href="mailto:hamid.achahboune@gmail.com" >Envoyer</a>
+                  <a href="#" >Envoyer</a>
               </div>
  
               </form>
-            </div>
+
+              <?php
+              
+ if (isset($_POST['message'])) {
+        $entete  = 'MIME-Version: 1.0' . "\r\n";
+        $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+        $entete .= 'From: message-portfolio@portfolio.fr' . "\r\n";
+        $entete .= '<h3> ' . $_POST['firstname"']." ". $_POST['lastname']."</h3>";
+
+        $entete .= "<br>".$_POST['mail'];
+
+
+        $message = "<p>".htmlspecialchars($_POST['message'])."</p>"  ;
+
+        $retour = mail('hamid.achahboune@gmail.com', 'Envoi depuis page Contact', $message, $entete);
+        if($retour)
+            echo '<p>Votre message a bien été envoyé.</p>';
+    }?>
+            </div> 
             <div class="btn-btn-default">
               <a href="#" class="btn btn-default">Retourner en haut ↑</a>
           </div>
