@@ -15,7 +15,7 @@
 
 <body>
 
-  <main id="main-menu">
+  <main id="main-menu">0
     <div class="row-limit-size">
       <section id="first">
 
@@ -59,7 +59,7 @@
     <h5>A propos de <span>Moi</span></h5>
       <div class="a-propos-de-moi">
         <div class="a-propos-texts">
-          <p>Après plusieurs années d'études et une session de programmation informatique au Canada à Québec,je me suis découvert une passion pour le développement. En pleine reconversion professionnelle,j'ai décidé de me diriger dans cette voie etd'entreprendre une formation afin de concrétiser mon projet professionnel.
+          <p>Après plusieurs années d'études et une session de programmation informatique au Canada à Québec,je me suis découvert une passion pour le développement. En pleine reconversion professionnelle,j'ai décidé de me diriger dans cette voie et d'entreprendre une formation afin de concrétiser mon projet professionnel.
           </p>
          
         </div>
@@ -71,7 +71,7 @@
         
       </div>
       <div class="cv">
-     <a href="./CV HAMID 2023.pdf " target="_blank">Télécharger CV</a>
+     <a href="./mon-cv.pdf " target="_blank">Télécharger CV</a>
      </div>
      </section>
     <section id="Compétence">
@@ -129,11 +129,11 @@
       <h5>Projet<span>s</span></h5>
       <div class="cards">
         <figure class="gites">
-          <a href="http://gites/" target="_blank"><img src="./img/Gites-Marhaba.png" alt="gites"><br><span> Mon premier projet one-page <br> en HTML5/CSS3</span></a>
+          <a href="http://gites/" target="_blank"><img src="./img/Gites-marhaba.png" alt="gites"><br><span> Mon premier projet one-page <br> en HTML5/CSS3</span></a>
         </figure>
 
         <figure class="jado">
-          <a href="http://jadoo/" target="_blank"><img src="./img/jado.png" alt="jado"><br><span>Création d'un site web resturant sushi <br> en HTML5/CSS3 responsive design</span></a>
+          <a href="http://jadoo/" target="_blank"><img src="./img/jadoo-web-site.png" alt="jado"><br><span>Création d'un site web resturant sushi <br> en HTML5/CSS3 responsive design</span></a>
         </figure>
 
         <figure class="défi">
@@ -197,7 +197,7 @@
       </div>
     </section>
     <footer class="content-footer">
-      <p>Copyright © 2023 Portfolio<span> Hamid ACHAHBOUNE</span>.</p>
+      <p>© 2023 créé par <span> Hamid ACHAHBOUNE</span> tous droits réservés.</p>
     </footer>
 
     </div> -->
